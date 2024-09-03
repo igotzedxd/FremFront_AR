@@ -1,0 +1,9 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: stretch;
+  flex-flow: row wrap;
+}
+

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Slabo+27px&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Slabo 27px", serif;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.heading {
+  font-family: "Chakra Petch", sans-serif;
+}

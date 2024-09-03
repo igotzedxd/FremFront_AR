@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Slabo+27px&display=swap");
+.nav {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  box-shadow: 1px 1px 7px rgba(85, 134, 143, 0.712);
+  background: rgb(5, 5, 5);
+  color: hsl(189, 75%, 55%);
+  font-size: 1.8rem;
+  height: 50px;
+}
+
+.inner {
+  width: 1140px;
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.logo h2 {
+  margin-top: 6px;
+  margin-left: 6px;
+  font-family: "Black Ops One", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.links {
+  position: relative;
+  display: flex;
+}
+
+.link {
+  cursor: pointer;
+  padding: 0 0.5rem;
+  position: relative;
+}

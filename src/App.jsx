@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Camera from "./components/camera/Camera";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <>
-      <Camera />
+      <Header />
     </>
   );
 }
