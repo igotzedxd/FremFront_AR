@@ -1,0 +1,214 @@
+/* src/components/showcase/showcase.module.css */
+
+.showcase {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(5, 5, 5);
+}
+
+.container {
+  width: 1366px;
+  height: 80%;
+  position: relative;
+}
+
+.showcaseImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.container .storeIcon {
+  width: 2.2rem;
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  background: transparent;
+}
+
+.container .storeIcon span {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: hsla(189, 75%, 55%, 0.658);
+  border-radius: 50%;
+  outline: 2px solid rgb(255, 255, 255);
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.5s;
+  position: relative;
+  z-index: 3;
+  display: grid;
+  place-content: center;
+}
+
+.container .storeIcon:hover span {
+  box-shadow: inset 0 0 15px 5px rgba(99, 99, 99, 0.3);
+  transform: scale(0.5);
+}
+
+.icon {
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.icon1 {
+  top: 47%;
+  left: 18%;
+  transform: perspective(500px) rotateX(8deg) rotateY(8deg); /* Adjust transformations to simulate perspective */
+}
+
+.icon2 {
+  top: 50%;
+  right: 29%;
+  transform: perspective(500px) rotateX(-5deg) rotateY(5deg); /* Adjust transformations to simulate perspective */
+}
+
+.icon3 {
+  top: 49.5%;
+  left: 36%;
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg); /* Adjust transformations to simulate perspective */
+}
+
+.icon4 {
+  top: 52%;
+  left: 58%;
+  transform: perspective(500px) rotateX(15deg) rotateY(15deg); /* Adjust transformations to simulate perspective */
+}
+
+.info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+.store {
+  width: 180px;
+  height: 220px;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(90deg, hsla(180, 71%, 8%, 0.445), hsla(188, 67%, 19%, 0.178));
+  display: flex;
+  align-items: start;
+  border-radius: 20px;
+  outline: 2px solid rgba(182, 194, 193, 0.411);
+  box-shadow: inset -4px -4px 12px rgba(85, 134, 143, 0.267), 1px 1px 4px rgba(85, 134, 143, 0.712);
+  padding: 12px;
+  opacity: 0;
+  backdrop-filter: blur(0.8px);
+  color: rgb(230, 230, 230);
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5), -1px 0px 1px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1rem;
+  transition: transform 0.8s, opacity 0.6s ease-out;
+  pointer-events: none;
+}
+
+.showStore {
+  opacity: 1;
+  display: flex;
+}
+
+.storeInner {
+  width: 100%;
+}
+
+.opens {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.day {
+  line-height: 1;
+  font-size: 0.9rem;
+}
+
+.ratings {
+  display: flex;
+  flex-flow: column;
+}
+
+.rating {
+  position: relative;
+}
+
+.ratingsOverlay {
+  height: 100%;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.store1 {
+  top: 6.5%;
+  left: 9.2%;
+  z-index: 3;
+}
+
+.store2 {
+  top: 12.4%;
+  left: 60%;
+  transform: scale(0.9);
+  z-index: 4;
+}
+
+.store3 {
+  top: 14.6%;
+  left: 28%;
+  transform: scale(0.8);
+  z-index: 5;
+}
+
+.store4 {
+  top: 20%;
+  left: 50.2%;
+  transform: scale(0.7);
+  z-index: 6;
+}
+
+/* Creating the tail using ::before */
+.store::before {
+  content: "";
+  position: absolute;
+  top: 67%;
+  left: 40%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(15, 78, 83, 0.479); /* third value being the bottom side */
+  border-radius: 45%; /* Adjust the border-radius values to target the radius */
+  width: 200px;
+  height: 160px;
+  transform: rotateZ(-32deg);
+  pointer-events: none;
+}
+.store::after {
+  content: "";
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(15, 78, 83, 0.479); /* third value being the bottom side */
+  border-radius: 45%; /* Adjust the border-radius values to target the radius */
+  width: 200px;
+  height: 150px;
+  transform: rotateZ(-20deg);
+  pointer-events: none;
+}
