@@ -36,7 +36,9 @@ function HeroHeading() {
 
   return (
     <div className={styles.heading}>
-      <h1>{displayedText}</h1>
+      <h1 className="heading" style={index === 1 ? { color: "#E33636" } : {}}>
+        {displayedText}
+      </h1>
     </div>
   );
 }

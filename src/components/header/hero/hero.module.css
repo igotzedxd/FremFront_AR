@@ -1,71 +1,71 @@
-/* .hero {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  height: calc(100dvh - 50px);
-  z-index: -1;
-  filter: brightness(0.3);
-}
- */
-
 .hero {
+  margin-top: 70px;
   width: 100%;
+  height: calc(100dvh - 70px);
   background: rgb(3, 0, 0);
   overflow: hidden;
-}
-
-.inner {
-  width: 1366px;
-  margin: 0 auto;
-  height: 80%;
-  margin-top: 6%;
   position: relative;
 }
 
-.inner::before {
+.hero::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - 70px);
+  background: radial-gradient(circle at center, rgba(124, 124, 124, 0.5), rgba(0, 0, 0, 0.5) 70%);
+  z-index: 2;
+}
+
+.inner {
+  position: absolute;
   inset: 0;
-  z-index: 1;
+  width: 1366px;
+  margin: 0 auto;
+  height: 80%;
+  margin-top: 4%;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.cover {
   width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-}
-
-.vContainer .line {
-  position: absolute;
-  background: hsl(189, 75%, 55%);
-  width: 100%;
-  height: 2px;
-}
-
-.hContainer .line {
-  position: absolute;
-  background: hsl(189, 75%, 55%);
-  width: 2px;
-  height: 100%;
-}
-
-.vContainer .line:last-child,
-.hContainer .line:last-child {
-  display: none;
+  height: calc(100dvh - 70px);
+  object-fit: cover;
 }
 
 .lightSource {
   position: absolute;
-  z-index: 5;
-  width: 1000px; /* Make it larger for a more diffuse effect */
-  height: 1000px;
-  transform: translate(-600px, -50%);
+  z-index: 15;
+  width: 2000px; /* Make it larger for a more diffuse effect */
+  height: 2000px;
   background: radial-gradient(
     circle,
-    rgba(50, 50, 50, 0.04) 0%,
-    rgba(30, 30, 30, 0.02) 40%,
-    rgba(10, 10, 10, 0) 80%
+    rgba(30, 30, 30, 0.6) 0%,
+    rgba(15, 15, 15, 0.4) 30%,
+    rgba(0, 0, 0, 0.05) 70%
   );
   pointer-events: none;
   mix-blend-mode: screen;
 }
 
+.buttons {
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.buttons h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: whitesmoke;
+  letter-spacing: 1.2px;
+}

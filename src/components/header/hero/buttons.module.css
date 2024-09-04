@@ -1,0 +1,58 @@
+.button {
+  background: rgba(75, 75, 75, 0.5);
+  font-size: 1.4rem;
+  padding-left: 40px;
+  color: white;
+  font-family: "Black Ops One", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  width: inherit;
+  height: inherit;
+  padding-left: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  clip-path: polygon(0 0, 0 0, 25% 50%, 0 100%, 0 100%);
+  z-index: 8;
+  transition: clip-path 0.5s ease;
+}
+
+.pdf {
+  margin-left: 3rem;
+  position: relative;
+  height: 60px;
+  width: 240px;
+  bottom: 0;
+  z-index: 9;
+}
+
+.pdf .overlay {
+  background: #e33636;
+}
+
+.pdf:hover .overlay {
+  clip-path: polygon(0 0, 100% 0, 100% 49%, 100% 100%, 0 100%);
+}
+
+.btn {
+  position: relative;
+  height: 60px;
+  width: 240px;
+  z-index: 9;
+}
+
+.btn .overlay {
+  background: #36c8e2;
+}
+
+.btn:hover .overlay {
+  clip-path: polygon(0 0, 100% 0, 100% 49%, 100% 100%, 0 100%);
+}

@@ -1,0 +1,44 @@
+.about {
+  padding-top: 70px;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background: black;
+}
+
+.sec {
+  width: 1366px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: whitesmoke;
+}
+
+.sec span {
+  width: 40%;
+}
+
+.sec h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+
+.sec span p {
+  font-size: 1.4rem;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.vid {
+  height: 80%;
+  width: 600px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}

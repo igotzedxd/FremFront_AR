@@ -7,7 +7,7 @@ function Nav() {
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const navRef = useRef(null);
 
-  const links = ["Home", "About", "Services", "Contact"];
+  const links = ["HOME", "ABOUT", "HOME", "ABOUT"];
 
   useEffect(() => {
     const activeLink = navRef.current.children[activeIndex] || null;

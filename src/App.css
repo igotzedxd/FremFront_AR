@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Slabo 27px", serif;
 }
@@ -21,6 +25,20 @@ button {
   border: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
 .heading {
   font-family: "Chakra Petch", sans-serif;
+}
+
+.blackOps {
+  font-family: "Black Ops One", sans-serif;
 }
