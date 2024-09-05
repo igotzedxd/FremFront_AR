@@ -2,10 +2,10 @@ import Nav from "./nav/Nav";
 import Hero from "./hero/Hero";
 import styles from "./header.module.css";
 
-function Header() {
+function Header({ activeIndex, setActiveIndex }) {
   return (
     <div className={styles.container}>
-      <Nav />
+      <Nav activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
       <Hero />
     </div>
   );

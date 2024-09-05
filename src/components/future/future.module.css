@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  min-height: 800px;
+  padding: 70px 0;
+  background: url("/today.jpg") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.7) 75%
+  );
+  box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.7);
+}
+
+.inner {
+  width: 1366px;
+  inset: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2rem;
+  color: whitesmoke;
+  position: relative;
+  z-index: 3;
+}
+
+.inner h3 {
+  font-family: "black ops one", sans-serif;
+  font-size: 3.6rem;
+}
+
+.inner p {
+  font-family: "chakra petch", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 1.2;
+  text-align: center;
+  width: 80%;
+}
+
+.buttons {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    padding-top: 100px;
+  }
+
+  .inner {
+    width: 90%;
+    padding: 0 1rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 0 50px 0;
+  }
+  .inner {
+    width: 90%;
+  }
+
+  .inner h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .inner p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .inner * {
+    width: 100%;
+    padding: 0;
+  }
+
+  .buttons {
+    transform: scale(0.75);
+  }
+}

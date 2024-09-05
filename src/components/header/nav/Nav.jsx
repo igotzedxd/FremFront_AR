@@ -1,13 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./nav.module.css";
 
-function Nav() {
-  const [activeIndex, setActiveIndex] = useState(0);
+function Nav({ activeIndex }) {
   const [hoverIndex, setHoverIndex] = useState(null);
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const navRef = useRef(null);
 
-  const links = ["HOME", "ABOUT", "HOME", "ABOUT"];
+  const links = ["TECH", "DEMO", "WEB", "FREMTID"];
 
   useEffect(() => {
     const activeLink = navRef.current.children[activeIndex] || null;
@@ -39,7 +38,8 @@ function Nav() {
         </div>
         <div className={styles.links} ref={navRef}>
           {links.map((link, index) => (
-            <div
+            <a
+              href={`#${link.toLowerCase()}`}
               key={index}
               className={`${styles.link} ${index === activeIndex && styles.active}`}
               onClick={() => setActiveIndex(index)}
@@ -56,10 +56,11 @@ function Nav() {
               }
             >
               <p>{link}</p>
-            </div>
+            </a>
           ))}
           <div
             style={{
+              display: activeIndex >= 0 ? "block" : "none",
               position: "absolute",
               bottom: 0,
               height: "2px",

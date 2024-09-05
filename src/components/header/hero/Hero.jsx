@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./hero.module.css";
 import HeroHeading from "./HeroHeading";
-import Buttons from "./Buttons";
+import Buttons from "../../buttons/Buttons";
 
 function Hero() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -30,7 +30,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className={styles.hero} ref={heroRef}>
+    <div id="top" className={styles.hero} ref={heroRef}>
       <img className={styles.cover} src="/cover.jpg" alt="cover" />
       <div className={styles.inner}>
         <HeroHeading />

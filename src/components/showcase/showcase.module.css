@@ -2,17 +2,39 @@
 
 .showcase {
   width: 100%;
-  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(5, 5, 5);
+  overflow: hidden;
+  padding: 190px 0 120px 0;
+  position: relative;
+  background: url("/public/bg1.jpg") no-repeat center center/cover;
+}
+
+.showcaseHeading {
+  align-self: start;
+  color: white;
+  font-size: 3.6rem;
+  position: absolute;
+  top: 90px;
 }
 
 .container {
-  width: 1366px;
-  height: 80%;
+  width: 1366px; /* Allow container to take full width */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow-x: auto;
+  height: 100%;
   position: relative;
+}
+
+.showcaseFallback {
+  height: 100%;
+  object-fit: contain;
+  max-width: none; /* Ensure no width limit on the fallback image */
 }
 
 .showcaseImg {
@@ -157,7 +179,7 @@
 }
 
 .store1 {
-  top: 6.5%;
+  top: 8%;
   left: 9.2%;
   z-index: 3;
 }
@@ -170,7 +192,7 @@
 }
 
 .store3 {
-  top: 14.6%;
+  top: 15.6%;
   left: 28%;
   transform: scale(0.8);
   z-index: 5;

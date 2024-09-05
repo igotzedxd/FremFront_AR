@@ -1,9 +1,64 @@
+import { useState, useEffect, useRef } from "react";
 import styles from "./about.module.css";
 
 function About() {
+  const aboutRef = useRef(null);
+  const [showXr, setShowXr] = useState(false);
+  const [showAr, setShowAr] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("down"); // Track scroll direction
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      threshold: [0.25, 0.35, 0.65], // Multiple thresholds
+    };
+
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const currentScrollY = window.pageYOffset;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down"); // Scrolling down
+      } else {
+        setScrollDirection("up"); // Scrolling up
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", updateScrollDirection);
+
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        const intersectionRatio = entry.intersectionRatio;
+
+        if (scrollDirection === "down") {
+          // Downward scrolling (original logic)
+          setShowXr(intersectionRatio >= 0.35);
+          setShowAr(intersectionRatio >= 0.65 || (intersectionRatio >= 0.25 && showAr));
+        } else {
+          // Upward scrolling (reversed logic)
+          setShowAr(intersectionRatio >= 0.35);
+          setShowXr(intersectionRatio >= 0.65 || (intersectionRatio >= 0.25 && showXr));
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+    if (aboutRef.current) observer.observe(aboutRef.current);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection);
+      if (aboutRef.current) observer.unobserve(aboutRef.current);
+    };
+  }, [scrollDirection, showAr, showXr]);
+
   return (
-    <div id="about" className={styles.about}>
-      <div className={`${styles.xr} ${styles.sec}`}>
+    <div ref={aboutRef} id="tech" className={styles.about}>
+      <h2 className="heading" style={{ color: "whitesmoke", fontSize: "3.6rem" }}>
+        Teknologier
+      </h2>
+      <div className={`${styles.xr} ${styles.sec} ${showXr && styles.animate}`}>
         <iframe
           className={styles.vid}
           src="https://www.youtube.com/embed/BlBj2KgHmoM"
@@ -18,7 +73,7 @@ function About() {
           </p>
         </span>
       </div>
-      <div className={`${styles.ar} ${styles.sec}`}>
+      <div className={`${styles.ar} ${styles.sec} ${showAr && styles.animate}`}>
         <span>
           <h3 className="blackOps">AR.JS</h3>
           <p>

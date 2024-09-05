@@ -69,3 +69,35 @@
   color: whitesmoke;
   letter-spacing: 1.2px;
 }
+
+@media screen and (max-width: 1366px) {
+  .inner {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    height: calc(100dvh - 120px);
+    margin-top: 120px;
+  }
+
+  .hero::before {
+    height: calc(100dvh - 120px);
+  }
+
+  .cover {
+    height: calc(100dvh - 120px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .buttons {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .buttons h2 {
+    font-size: 1.2rem;
+  }
+}

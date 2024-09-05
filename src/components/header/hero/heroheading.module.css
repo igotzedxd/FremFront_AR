@@ -4,7 +4,7 @@
   left: 15%;
   color: #36c8e2;
   z-index: 9;
-  font-size: 2.4rem;
+  font-size: 2vw;
 }
 
 .heading * {
@@ -20,4 +20,18 @@
   height: 100%;
   background: rgb(177, 177, 177);
   animation: blink 0.8s linear infinite;
+}
+
+@media screen and (max-width: 1200px) {
+  .heading {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 2.4vw;
+  }
 }

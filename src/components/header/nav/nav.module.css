@@ -51,3 +51,20 @@
   letter-spacing: 1.2;
   font-weight: 400;
 }
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    height: 120px;
+  }
+  .inner {
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .links {
+    transform: scale(0.8);
+  }
+}
