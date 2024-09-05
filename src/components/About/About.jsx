@@ -76,7 +76,7 @@ function About() {
       <div className={`${styles.ar} ${styles.sec} ${showAr && styles.animate}`}>
         <span>
           <h3 className="blackOps">AR.JS</h3>
-          <p id="bob">
+          <p>
             AR.js bruger markører i den virkelige verden til at placere 3D-objekter, ved brug af
             Three.js. En markør er et kvadratisk billede, ligner QR-kode, som AR.js kan genkende og
             bruge til at placere objekter.
