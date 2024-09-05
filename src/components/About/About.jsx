@@ -10,7 +10,7 @@ function About() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      threshold: [0.25, 0.35, 0.65], // Multiple thresholds
+      threshold: [0.25, 0.35, 0.5, 0.58],
     };
 
     let lastScrollY = window.pageYOffset;
@@ -18,9 +18,9 @@ function About() {
     const updateScrollDirection = () => {
       const currentScrollY = window.pageYOffset;
       if (currentScrollY > lastScrollY) {
-        setScrollDirection("down"); // Scrolling down
+        setScrollDirection("down");
       } else {
-        setScrollDirection("up"); // Scrolling up
+        setScrollDirection("up");
       }
       lastScrollY = currentScrollY;
     };
@@ -34,11 +34,11 @@ function About() {
         if (scrollDirection === "down") {
           // Downward scrolling (original logic)
           setShowXr(intersectionRatio >= 0.35);
-          setShowAr(intersectionRatio >= 0.65 || (intersectionRatio >= 0.25 && showAr));
+          setShowAr(intersectionRatio >= 0.58 || (intersectionRatio >= 0.25 && showAr));
         } else {
           // Upward scrolling (reversed logic)
           setShowAr(intersectionRatio >= 0.35);
-          setShowXr(intersectionRatio >= 0.65 || (intersectionRatio >= 0.25 && showXr));
+          setShowXr(intersectionRatio >= 0.58 || (intersectionRatio >= 0.25 && showXr));
         }
       });
     };
