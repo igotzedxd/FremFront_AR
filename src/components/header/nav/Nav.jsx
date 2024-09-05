@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./nav.module.css";
 
-function Nav({ activeIndex }) {
+function Nav({ activeIndex, setActiveIndex }) {
   const [hoverIndex, setHoverIndex] = useState(null);
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const navRef = useRef(null);

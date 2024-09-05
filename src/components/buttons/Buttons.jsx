@@ -16,7 +16,7 @@ function Buttons({ pdf, top }) {
       <span className={styles.overlay}>SCROLL OP</span>
     </a>
   ) : (
-    <a href="#about" className={`${styles.button} ${styles.btn}`}>
+    <a href="#tech" className={`${styles.button} ${styles.btn}`}>
       UDFORSK
       <span className={styles.overlay}>SCROLL NED</span>
     </a>
