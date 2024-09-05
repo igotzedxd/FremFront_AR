@@ -84,10 +84,6 @@
     opacity: 0;
     transform: scale(0);
   }
-  40% {
-    opacity: 0.4;
-    transform: scale(0.4);
-  }
   100% {
     opacity: 1;
     transform: scale(1);
@@ -107,11 +103,6 @@
     opacity: 0;
     transform: translateZ(800px);
     font-size: 0.4rem;
-  }
-  40% {
-    opacity: 0.4;
-    transform: translateZ(400px);
-    font-size: 0.8rem;
   }
   100% {
     opacity: 1;

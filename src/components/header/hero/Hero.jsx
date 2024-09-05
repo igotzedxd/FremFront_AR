@@ -4,8 +4,9 @@ import HeroHeading from "./HeroHeading";
 import Buttons from "../../buttons/Buttons";
 
 function Hero() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef(null);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -13,19 +14,16 @@ function Hero() {
         const rect = heroRef.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        setCursorPosition({ x, y });
+        setX(x);
+        setY(y);
       }
     };
 
     const heroElement = heroRef.current;
-    if (heroElement) {
-      heroElement.addEventListener("mousemove", handleMouseMove);
-    }
+    heroElement && heroElement.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      if (heroElement) {
-        heroElement.removeEventListener("mousemove", handleMouseMove);
-      }
+      heroElement && heroElement.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -43,9 +41,9 @@ function Hero() {
       <div
         className={styles.lightSource}
         style={{
-          top: cursorPosition.y,
-          left: cursorPosition.x,
-          transform: `translate(${cursorPosition.x - 2000}px, ${cursorPosition.y - 1000}px)`,
+          top: y,
+          left: x,
+          transform: `translate(-50%, -50%)`,
         }}
       />
     </div>
