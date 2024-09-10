@@ -74,36 +74,6 @@ function About() {
         </span>
       </div>
 
-      <span className={styles.lineContainer}>
-        <div className={styles.line}></div>
-        <div className={styles.shape}>
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
-              className={styles.fill}
-            ></path>
-          </svg>
-        </div>
-        <div className={`${styles.shape} ${styles.shapeFlipped}`}>
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
-              className={styles.fill}
-            ></path>
-          </svg>
-        </div>
-      </span>
-
       <div className={`${styles.ar} ${styles.sec} ${showAr && styles.animate}`}>
         <span>
           <h3 className="blackOps">AR.JS</h3>

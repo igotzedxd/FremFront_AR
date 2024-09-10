@@ -3,7 +3,11 @@ import { FaRegFilePdf } from "react-icons/fa6";
 
 function Buttons({ pdf, top }) {
   return pdf ? (
-    <a href="#" className={`${styles.button} ${styles.pdf}`}>
+    <a
+      href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:f6d2d357-7d9c-43bb-9ee6-7b5d7b004bff"
+      target="_blank"
+      className={`${styles.button} ${styles.pdf}`}
+    >
       LÆS MERE
       <span className={styles.overlay}>
         <FaRegFilePdf size={26} />

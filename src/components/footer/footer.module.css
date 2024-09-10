@@ -1,18 +1,26 @@
-footer {
+.footer {
   width: 100%;
   padding: 20px 0;
   display: flex;
   justify-content: center;
   background: rgb(5, 5, 5);
-  box-shadow: inset -2px 0 2px 2px rgba(200, 200, 200, 0.4);
+  box-shadow: inset -2px 0 2px 2px rgba(14, 14, 14, 0.4);
   color: whitesmoke;
 }
 
 .inner {
   width: 1366px;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .inner i {
   text-align: center;
+}
+
+@media screen and (max-width: 1366px) {
+  .inner {
+    width: 80%;
+  }
 }
