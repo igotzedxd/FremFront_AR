@@ -4,7 +4,7 @@ import { FaRegFilePdf } from "react-icons/fa6";
 function Buttons({ pdf, top }) {
   return pdf ? (
     <a
-      href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:f6d2d357-7d9c-43bb-9ee6-7b5d7b004bff"
+      href="https://acrobat.adobe.com/id/urn:aaid:sc:eu:714868c1-ccde-4bc1-a772-e43a67f35504"
       target="_blank"
       className={`${styles.button} ${styles.pdf}`}
     >
